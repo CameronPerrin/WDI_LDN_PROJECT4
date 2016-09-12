@@ -23,29 +23,31 @@
   <link rel="stylesheet" href="/css/app.css">
 </head>
 <body ng-controller="MainController as main">
-<header class="navbar">
-  <h1 ui-sref="chaptersIndex">Choosite</h1>
-  <div class="hamburger" ng-click="main.hamburgerOpen()">☰</div>
-  <div class="hamburger-menu" ng-show="main.sesame">I AM SHOWING!!!</div>
-  <ul>
-    <li ng-if="!main.currentUser" ui-sref="login">
-      login
-    </li>
-    <li ng-if="!main.currentUser" ui-sref="register">
-      register
-    </li>
-    <li ng-if="main.currentUser" ui-sref="register" ng-click="main.logout()">
-      logout
-    </li>
-    <li ui-sref="home">
-      home
-    </li>
-    <li ui-sref="chaptersIndex">
-      chapters
-    </li>
-  </ul>
-</header>
-  <div class="warn">{{ main.errorMessage }}</div>
-  <main ui-view></main>
+  <header class="navbar">
+    <h1 ui-sref="chaptersIndex">Choosite</h1>
+    <div class="hamburger" ng-click="main.hamburgerOpen()">☰</div>
+    <div class="hamburger-menu" ng-class="{ right: main.sesame }">I AM SHOWING!!!</div>
+    <ul>
+      <li ng-if="!main.currentUser" ui-sref="login">
+        login
+      </li>
+      <li ng-if="!main.currentUser" ui-sref="register">
+        register
+      </li>
+      <li ng-if="main.currentUser" ui-sref="register" ng-click="main.logout()">
+        logout
+      </li>
+      <li ui-sref="home">
+        home
+      </li>
+      <li ui-sref="chaptersIndex">
+        chapters
+      </li>
+    </ul>
+  </header>
+  <main ng-class="{ left: main.move }">
+    <div class="warn">{{ main.errorMessage }}</div>
+    <main ui-view></main>
+  </main>
 </body>
 </html>

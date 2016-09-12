@@ -1,3 +1,19 @@
+html {
+  overflow-x: hidden; }
+
+main {
+  position: relative;
+  left: 0;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear; }
+
+.left {
+  left: -320px !important; }
+  @media screen and (min-width: 651px) {
+    .left {
+      left: 0px !important; } }
+
 body {
   text-align: center;
   background-color: #F5F4FB;
@@ -36,7 +52,13 @@ body {
     background-color: #DBD7ED;
     position: absolute;
     top: 30px;
-    right: 0; }
+    right: 0;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear; }
+    @media screen and (min-width: 651px) {
+      .navbar .hamburger-menu {
+        right: -320px !important; } }
   .navbar ul {
     top: 0;
     right: 0;
@@ -59,6 +81,9 @@ body {
         background-color: #F5F4FB;
         cursor: pointer; }
 
+.right {
+  right: -320px !important; }
+
 .warn {
   background-color: red;
   position: absolute;
@@ -70,7 +95,6 @@ body {
 .auth-title {
   position: relative;
   z-index: 1;
-  margin: 8px;
   font-size: 20px; }
 
 .authentication {
@@ -87,8 +111,8 @@ body {
       margin-left: -35%; } }
   @media screen and (max-width: 500px) {
     .authentication {
-      width: 90%;
-      margin-left: -45%; } }
+      width: 100%;
+      margin-left: -50%; } }
   .authentication div {
     width: 80%;
     height: 32px;

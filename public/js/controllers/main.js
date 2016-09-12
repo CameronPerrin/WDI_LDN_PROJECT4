@@ -9,10 +9,12 @@ function MainController(TokenService, $state, $rootScope) {
 
   this.currentUser = TokenService.decodeToken();
 
-  this.sesame = false
+  this.sesame = true;
+  this.move = false;
 
   this.hamburgerOpen = function hamburgerOpen() {
     this.sesame = !this.sesame;
+    this.move = !this.move;
   }
 
   this.logout = function logout() {

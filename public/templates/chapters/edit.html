@@ -1,12 +1,9 @@
 <form ng-submit="chaptersEdit.save()">
   <textarea type="text" name="content" ng-model="chaptersEdit.selected.content" placeholder="Story Content">
   </textarea>
-<!--   <div ng-repeat="option in chaptersEdit.selected.options">
-    <input type="text" ng-model="option.buttonText" placeholder="thing">
-  </div> -->
+
   <input type="text" name="optionOneText" ng-model="chaptersEdit.selected.optionOneText" placeholder="Option One">
   <input type="text" name="optionTwoText" ng-model="chaptersEdit.selected.optionTwoText" placeholder="Option Two">
-  <input type="text" name="owner" ng-model="main.currentUser._id">
   <button>Save</button>
   <button type="button" ui-sref="chaptersShow({ id: chaptersEdit.selected._id })">Cancel</button>
 </form>

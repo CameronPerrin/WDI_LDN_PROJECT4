@@ -6,6 +6,25 @@ $medC: #DBD7ED;
 $darkC: #B6AED6;
 $darkerC: #887DB5;
 
+html{
+  overflow-x: hidden
+}
+
+main{
+  position: relative;
+  left: 0;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.left{
+  left: -320px !important;
+  @media screen and (min-width: 651px) {
+    left: 0px !important;
+  }
+}
+
 body{
   text-align: center;
   background-color: $lightC;
@@ -48,6 +67,12 @@ body{
     position: absolute;
     top: 30px;
     right: 0;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+    @media screen and (min-width: 651px) {
+      right: -320px !important;
+    }
   }
   ul{
     @media screen and (max-width: 650px) {
@@ -75,6 +100,10 @@ body{
   }
 }
 
+.right{
+  right: -320px !important;
+}
+
 .warn{
   background-color: red;
   position: absolute;
@@ -88,7 +117,6 @@ body{
 .auth-title{
   position:relative;
   z-index: 1;
-  margin: 8px;
   font-size: 20px;
 }
 
@@ -105,8 +133,8 @@ body{
       margin-left: -35%;
     }
   @media screen and (max-width: 500px) {
-    width: 90%;
-    margin-left: -45%;
+    width: 100%;
+    margin-left: -50%;
   }
   div{
     width: 80%;

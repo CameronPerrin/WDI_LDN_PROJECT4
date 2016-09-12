@@ -9,6 +9,12 @@ var chapterSchema = new mongoose.Schema({
   owner: { type: mongoose.Schema.ObjectId, ref: "User" }
 });
 
+// options: {
+//   chapters: [{
+//     _id: { type: mongoose.Schema.ObjectId, ref: "Chapter" }
+//   }]
+// },
+
 chapterSchema.virtual('optionOneText')
   .set(function(text) {
     this._optionOneText = text;
