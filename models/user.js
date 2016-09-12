@@ -18,7 +18,6 @@ userSchema.set('toJSON', {
 userSchema.virtual('password')
   .set(function(password) {
     this._password = password;
-
     this.passwordHash = bcrypt.hashSync(this._password, bcrypt.genSaltSync(8));
   });
 
@@ -44,7 +43,7 @@ userSchema.path('passwordHash')
   });
   
 userSchema.methods.validatePassword = function(password) {
-    return bcrypt.compareSync(password, this.passwordHash);
+  return bcrypt.compareSync(password, this.passwordHash);
 }
 
 module.exports = mongoose.model("User", userSchema);

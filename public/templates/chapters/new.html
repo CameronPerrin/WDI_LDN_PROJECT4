@@ -1,0 +1,9 @@
+<form ng-submit="chaptersNew.create()">
+
+  <input type="text" name="content" ng-model="chaptersNew.new.content" placeholder="Story Content">
+  <input type="text" name="OptionOneText" ng-model="chaptersNew.new.OptionOneText" placeholder="Option One Text">
+  <input type="text" name="OptionTwoText" ng-model="chaptersNew.new.OptionTwoText" placeholder="Option Two Text">
+
+  <button>Save</button>
+  <button type="button" ui-sref="chaptersShow({ id: chaptersNew.new._id })">Cancel</button>
+</form>

@@ -1,0 +1,127 @@
+body {
+  text-align: center;
+  background-color: #F5F4FB;
+  font-family: 'EB Garamond', serif; }
+
+.navbar {
+  width: 100vw;
+  height: 30px;
+  background-color: #DBD7ED;
+  position: relative;
+  box-shadow: 0px 0px 5px #000000;
+  z-index: 999; }
+  .navbar h1 {
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Droid Sans Mono', monospace;
+    cursor: pointer;
+    width: 140px;
+    position: relative;
+    left: 50%;
+    margin-left: -70px; }
+  .navbar .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    font-size: 29px;
+    padding: 0 5px;
+    cursor: pointer; }
+    @media screen and (min-width: 651px) {
+      .navbar .hamburger {
+        display: none; } }
+  .navbar .hamburger-menu {
+    height: 100vh;
+    width: 320px;
+    background-color: #DBD7ED;
+    position: absolute;
+    top: 30px;
+    right: 0; }
+  .navbar ul {
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    position: absolute; }
+    @media screen and (max-width: 650px) {
+      .navbar ul {
+        display: none; } }
+    .navbar ul li {
+      flex: 1;
+      text-align: center;
+      color: black;
+      display: inline;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .navbar ul li:hover {
+        background-color: #F5F4FB;
+        cursor: pointer; }
+
+.warn {
+  background-color: red;
+  position: absolute;
+  z-index: 1000; }
+
+.chapters {
+  margin: 20px; }
+
+.auth-title {
+  position: relative;
+  z-index: 1;
+  margin: 8px;
+  font-size: 20px; }
+
+.authentication {
+  background-color: #B6AED6;
+  width: 40%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -20%; }
+  @media screen and (max-width: 1000px) {
+    .authentication {
+      width: 70%;
+      margin-left: -35%; } }
+  @media screen and (max-width: 500px) {
+    .authentication {
+      width: 90%;
+      margin-left: -45%; } }
+  .authentication div {
+    width: 80%;
+    height: 32px;
+    margin: 15px 0 0 10%; }
+    .authentication div:nth-child(1) {
+      margin: 70px 0 0 10%; }
+    .authentication div input {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      border: none; }
+  .authentication .auth-submit {
+    width: 120px;
+    height: 20px;
+    padding: 0;
+    margin: 2px 0 0 0;
+    border: 0;
+    position: relative;
+    z-index: 0;
+    background-color: #F5F4FB; }
+    .authentication .auth-submit:hover {
+      background-color: #DBD7ED;
+      cursor: pointer; }
+
+.content {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  margin: 25px 0 0 -40%;
+  padding: 20px;
+  font-size: 21px;
+  text-align: center;
+  background-color: #B6AED6; }
+
+/*# sourceMappingURL=app.css.map */

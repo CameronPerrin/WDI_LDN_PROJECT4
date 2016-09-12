@@ -1,0 +1,151 @@
+// font-family: 'EB Garamond', serif;
+// font-family: 'Droid Sans Mono', monospace;
+
+$lightC: #F5F4FB;
+$medC: #DBD7ED;
+$darkC: #B6AED6;
+$darkerC: #887DB5;
+
+body{
+  text-align: center;
+  background-color: $lightC;
+  font-family: 'EB Garamond', serif;
+}
+
+.navbar{
+  width: 100vw;
+  height: 30px;
+  background-color: $medC;
+  position:relative;
+  box-shadow: 0px 0px 5px #000000;
+  z-index: 999;
+  h1{
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Droid Sans Mono', monospace;
+    cursor: pointer;
+    width: 140px;
+    position: relative;
+    left: 50%;
+    margin-left: -70px;
+  }
+  .hamburger{
+    @media screen and (min-width: 651px) {
+      display: none;
+    }
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    font-size: 29px;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+  .hamburger-menu{
+    height: 100vh;
+    width: 320px;
+    background-color: $medC;
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+  ul{
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    li{
+      flex: 1;
+      text-align: center;
+      color: black;
+      display: inline;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover{
+        background-color: $lightC;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.warn{
+  background-color: red;
+  position: absolute;
+  z-index: 1000;
+}
+
+.chapters{
+  margin: 20px;
+}
+
+.auth-title{
+  position:relative;
+  z-index: 1;
+  margin: 8px;
+  font-size: 20px;
+}
+
+.authentication{
+  background-color: $darkC;
+  width: 40%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -20%;
+  @media screen and (max-width: 1000px) {
+      width: 70%;
+      margin-left: -35%;
+    }
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    margin-left: -45%;
+  }
+  div{
+    width: 80%;
+    height: 32px;
+    margin: 15px 0 0 10%;
+    &:nth-child(1){
+      margin: 70px 0 0 10%;
+    }
+    input{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      border: none;
+    }
+  }
+  .auth-submit{
+    width: 120px;
+    height: 20px;
+    padding: 0;
+    margin: 2px 0 0 0;
+    border: 0;
+    position: relative;
+    z-index: 0;
+    background-color: $lightC;
+    &:hover{
+      background-color: $medC;
+      cursor: pointer;
+    }
+  }
+}
+
+.content{
+  width: 80%;
+  position: relative;
+  left: 50%;
+  margin: 25px 0 0 -40%;
+  padding: 20px;
+  font-size: 21px;
+  text-align: center;
+  background-color: $darkC;
+}

@@ -2,6 +2,7 @@ var router = require('express').Router();
 var jwt = require('jsonwebtoken');
 var secret = require('../config/tokens').secret;
 var usersController = require('../controllers/users');
+var chaptersController = require('../controllers/chapters');
 var authController = require('../controllers/authentications');
 
 function secureRoute(req, res, next) {
@@ -28,6 +29,18 @@ router.route('/users/:id')
   .put(usersController.update)
   .patch(usersController.update)
   .delete(usersController.delete);
+
+router.route('/chapters')
+  .all(secureRoute)
+  .get(chaptersController.index)
+  .post(chaptersController.create);
+
+router.route('/chapters/:id')
+  .all(secureRoute)
+  .get(chaptersController.show)
+  .put(chaptersController.update)
+  .patch(chaptersController.update)
+  .delete(chaptersController.delete);
 
 router.post('/register', authController.register);
 router.post('/login', authController.login);

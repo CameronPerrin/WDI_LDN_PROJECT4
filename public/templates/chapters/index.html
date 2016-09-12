@@ -1,0 +1,8 @@
+<ul>
+  <li class="chapters" ng-repeat="chapter in chaptersIndex.all" ui-sref="chaptersShow({ id: chapter._id })">
+    <p>{{ chapter.content }}</p>
+    <p>{{ chapter.OptionOneText }}</p>
+    <p>{{ chapter.OptionTwoText }}</p>
+  </li>
+</ul>
+<button ui-sref="chaptersNew">Add</button>

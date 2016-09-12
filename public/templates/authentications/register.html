@@ -1,6 +1,6 @@
-<h2>register</h2>
+<h2 class="auth-title">register</h2>
 
-<form ng-submit="register.submit()">
+<form class="authentication" ng-submit="register.submit()">
   <div>
     <input type="text" name="username" ng-model="register.user.username" placeholder="Username">
   </div>
@@ -14,5 +14,5 @@
     <input type="password" name="passwordConfirmation" ng-model="register.user.passwordConfirmation" placeholder="Password confirmation">
   </div>
 
-  <input type="submit" value="Submit" class="btn btn-primary">
+  <input class="auth-submit" type="submit" value="Register">
 </form>
