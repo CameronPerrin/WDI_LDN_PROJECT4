@@ -5,6 +5,15 @@ angular
 Chapter.$inject = ["$resource", "API_URL"];
 function Chapter($resource, API_URL) {
   return $resource(API_URL + "/chapters/:id", { id: '@_id' }, {
-    update: { method: "PUT" }
+    update: { 
+      method: "PUT",
+      headers: { 'Content-Type': undefined },
+      transformRequest: formData.transform
+    },
+    save: {
+      method: "POST",
+      headers: { 'Content-Type': undefined },
+      transformRequest: formData.transform
+    }
   });
 }

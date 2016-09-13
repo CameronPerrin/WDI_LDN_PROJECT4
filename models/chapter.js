@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var chapterSchema = new mongoose.Schema({
   content: { type: String },
+  image: { type: String },
   options: [{ type: mongoose.Schema.ObjectId, ref: "Chapter" }],
   // hasContent: { type: Boolean, default: false },
   buttonText: { type: String },
