@@ -5,7 +5,6 @@ angular
 ChaptersShowController.$inject = ["Chapter", "$state"];
 function ChaptersShowController(Chapter, $state) {
   this.selected = Chapter.get($state.params);
-  console.log(this.selected);
 
   this.delete = function() {
     this.selected.$delete(function() {

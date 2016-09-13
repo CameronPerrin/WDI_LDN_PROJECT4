@@ -1,10 +1,10 @@
 // font-family: 'EB Garamond', serif;
 // font-family: 'Droid Sans Mono', monospace;
 
-$lightC: #F5F4FB;
-$medC: #DBD7ED;
-$darkC: #B6AED6;
-$darkerC: #887DB5;
+$lightC: #4E83AF;
+$medC: #135891;
+$darkC: #0A4474;
+$darkerC: #05335A;
 
 html{
   overflow-x: hidden
@@ -131,7 +131,7 @@ body{
   @media screen and (max-width: 1000px) {
       width: 70%;
       margin-left: -35%;
-    }
+  }
   @media screen and (max-width: 500px) {
     width: 100%;
     margin-left: -50%;
@@ -168,12 +168,78 @@ body{
 }
 
 .content{
-  width: 80%;
+  width: 900px;
   position: relative;
   left: 50%;
-  margin: 25px 0 0 -40%;
+  margin: 25px 0 0 -470px;
   padding: 20px;
   font-size: 21px;
   text-align: center;
   background-color: $darkC;
+  @media screen and (max-width: 1000px) {
+      width: 700px;
+      margin-left: -370px;
+  }
+  @media screen and (max-width: 800px) {
+      width: 500px;
+      margin-left: -270px;
+  }
+  @media screen and (max-width: 600px) {
+      width: 100vw;
+      margin-left: -50vw;
+      padding: 20px 0;
+  }
+}
+
+.options{
+  display: inline-block;
+  width: 900px;
+  padding: 20px;
+  @media screen and (max-width: 1000px) {
+      width: 700px;
+  }
+  @media screen and (max-width: 800px) {
+      width: 500px;
+  }
+  @media screen and (max-width: 600px) {
+      width: 100vw;
+      padding: 0;
+  }
+  div{
+    .option{
+      width: 100%;
+      height: 60px;
+      display: inline-block;
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $darkC;
+      &:hover{
+        cursor: pointer;
+        background-color: $darkerC;
+      }
+      &:active{
+        background-color: $darkC;
+      }
+    }
+  }
+}
+
+.content-edit{
+  width: 85%;
+  height: 60vh;
+  margin: 30px 0 10px 0;
+  padding: 20px;
+}
+
+.optionOne{
+  width: 80%;
+  padding: 17px;
+}
+
+.optionTwo{
+  width: 80%;
+  padding: 17px;
+  margin: 12px 0 0 3px;
 }

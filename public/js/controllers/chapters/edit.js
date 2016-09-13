@@ -6,7 +6,6 @@ ChaptersEditController.$inject = ["Chapter", "$state", "Chapter", "TokenService"
 function ChaptersEditController(Chapter, $state, Chapter, TokenService) {
 
   this.selected = Chapter.get($state.params);
-  console.log(this.selected);
   
   this.save = function() {
     this.user = TokenService.decodeToken();

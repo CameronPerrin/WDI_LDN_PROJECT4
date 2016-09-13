@@ -1,9 +1,11 @@
 <div class="content">{{ chaptersShow.selected.content }}</div>
 <!-- <div>{{ chaptersShow.selected.options }}</div> -->
-<span ng-repeat="option in chaptersShow.selected.options">
-  <a class="option" ng-if="option.owner" ui-sref="chaptersShow({ id: option._id })">{{ option.buttonText }}</a>
-  <a class="option" ng-if="!option.owner" ui-sref="chaptersEdit({ id: option._id })">{{ option.buttonText }}</a>
-</span>
-
+<div class="options">
+<div ng-repeat="option in chaptersShow.selected.options">
+  <div class="option" ng-if="option.owner" ui-sref="chaptersShow({ id: option._id })">{{ option.buttonText }}</div>
+  <div class="option" ng-if="!option.owner" ui-sref="chaptersEdit({ id: option._id })">{{ option.buttonText }}</div>
+</div>
+</div>
+<br>
 <button ui-sref="chaptersEdit({ id: chaptersShow.selected._id })">Edit</button>
 <button type="button" ng-click="chaptersShow.delete()">Delete</button>
