@@ -12,6 +12,10 @@ function MainController(TokenService, $state, $rootScope) {
   this.sesame = true;
   this.move = false;
 
+  this.dismiss = function dismiss() {
+    this.errorMessage = null;
+  }
+
   this.hamburgerOpen = function hamburgerOpen() {
     this.sesame = !this.sesame;
     this.move = !this.move;
@@ -29,6 +33,6 @@ function MainController(TokenService, $state, $rootScope) {
 
   $rootScope.$on("unauthorized", function() {
     $state.go("login");
-    self.errorMessage = "You must be logged in"
+    self.errorMessage = "You must be logged in to see the chapters"
   });
 }

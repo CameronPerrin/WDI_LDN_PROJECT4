@@ -30,7 +30,23 @@
   <header class="navbar">
     <h1 ui-sref="chaptersIndex">Choosite</h1>
     <div class="hamburger" ng-click="main.hamburgerOpen()">☰</div>
-    <div class="hamburger-menu" ng-class="{ right: main.sesame }">I AM SHOWING!!!</div>
+    <div class="hamburger-menu" ng-class="{ right: main.sesame }">
+      <div ng-if="!main.currentUser" ui-sref="login">
+        login
+      </div>
+      <div ng-if="!main.currentUser" ui-sref="register">
+        register
+      </div>
+      <div href="#" ng-if="main.currentUser" ui-sref="register" ng-click="main.logout()">
+        logout
+      </div>
+      <div ui-sref="home">
+        home
+      </div>
+      <div ui-sref="chaptersIndex">
+        chapters
+      </div>
+    </div>
     <ul>
       <li ng-if="!main.currentUser" ui-sref="login">
         login
@@ -50,7 +66,9 @@
     </ul>
   </header>
   <main ng-class="{ left: main.move }">
-    <div class="warn">{{ main.errorMessage }}</div>
+    <div class="warn" ng-if="main.errorMessage" ng-click="main.dismiss()">
+      {{ main.errorMessage }}<div class="close">X</div>
+    </div>
     <main ui-view></main>
   </main>
 </body>

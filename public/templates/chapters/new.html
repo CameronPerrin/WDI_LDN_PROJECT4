@@ -1,12 +1,13 @@
+
 <form ng-submit="chaptersNew.create()">
 
-  <textarea type="text" name="content" ng-model="chaptersNew.new.content" placeholder="Story Content">
+  <textarea class="content-change" type="text" name="content" ng-model="chaptersNew.new.content" placeholder="Story Content">
   </textarea>
-  <input type="file" file name="image" ng-model="chaptersNew.new.image" placeholder="Image">
-  <input type="text" name="optionOneText" ng-model="chaptersNew.new.optionOneText" placeholder="Option One Text">
-  <input type="text" name="optionTwoText" ng-model="chaptersNew.new.optionTwoText" placeholder="Option Two Text">
-<!--   <input type="checkbox" name="topLevel" ng-model="chaptersNew.new.topLevel" value="true" ng-init="checked=true"> -->
-
-  <button>Save</button>
-  <button type="button" ui-sref="chaptersShow({ id: chaptersNew.new._id })">Cancel</button>
+  <input class="image-change" type="file" file name="image" ng-model="chaptersNew.new.image" placeholder="Image">
+  <input class="optionOne" type="text" name="optionOneText" ng-model="chaptersNew.new.optionOneText" placeholder="Option One Text">
+  <input class="optionTwo" type="text" name="optionTwoText" ng-model="chaptersNew.new.optionTwoText" placeholder="Option Two Text">
+  <div class="buttons">
+    <button class="button-1">Create</button>
+    <button class="button-2" type="button" ui-sref="chaptersShow({ id: chaptersNew.new._id })">Cancel</button>
+  </div>
 </form>

@@ -1,8 +1,8 @@
 <form ng-submit="chaptersEdit.save()">
-  <textarea class="content-edit" type="text" name="content" ng-model="chaptersEdit.selected.content" placeholder="Story Content">
+  <textarea class="content-change" type="text" name="content" ng-model="chaptersEdit.selected.content" placeholder="Story Content">
   </textarea>
 
-  <input class="image-edit" type="file" file name="image" ng-model="chaptersEdit.selected.image" placeholder="Image">
+  <input class="image-change" type="file" file name="image" ng-model="chaptersEdit.selected.image" placeholder="Image">
 
   <input ng-hide="chaptersEdit.selected.endGame" class="optionOne" type="text" name="optionOneText" ng-model="chaptersEdit.selected.optionOneText" placeholder="Option One">
   <input ng-hide="chaptersEdit.selected.endGame" class="optionTwo" type="text" name="optionTwoText" ng-model="chaptersEdit.selected.optionTwoText" placeholder="Option Two">

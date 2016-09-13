@@ -39,18 +39,28 @@ body{
   position:relative;
   box-shadow: 0px 0px 5px #000000;
   z-index: 999;
+  @media screen and (max-width: 900px) {
+    height: 50px;
+  }
   h1{
     text-align: center;
     font-size: 28px;
     font-family: 'Droid Sans Mono', monospace;
     cursor: pointer;
-    width: 140px;
+    width: 300px;
     position: relative;
     left: 50%;
-    margin-left: -70px;
+    margin-left: -150px;
+    @media screen and (max-width: 900px) {
+      font-size: 35px;
+      padding: 5px 0 0 0;
+    }
   }
   .hamburger{
-    @media screen and (min-width: 651px) {
+    @media screen and (max-width: 900px) {
+      font-size: 47px;
+    }
+    @media screen and (min-width: 751px) {
       display: none;
     }
     position: absolute;
@@ -60,28 +70,43 @@ body{
     font-size: 29px;
     padding: 0 5px;
     cursor: pointer;
+    -webkit-user-select: none;     
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
   .hamburger-menu{
     height: 100vh;
     width: 320px;
     background-color: $medC;
     position: absolute;
-    top: 30px;
+    top: 50px;
     right: 0;
     -moz-transition: all 200ms linear;
     -o-transition: all 200ms linear;
     transition: all 200ms linear;
-    @media screen and (min-width: 651px) {
+    @media screen and (min-width: 751px) {
       right: -320px !important;
+    }
+    div{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      &:hover{
+        background-color: $lightC;
+        cursor: pointer;
+      }
     }
   }
   ul{
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 750px) {
       display: none;
     }
     top: 0;
     right: 0;
-    width: 200px;
+    width: 270px;
     height: 100%;
     display: flex;
     position: absolute;
@@ -93,6 +118,7 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
+      font-size: 23px;
       &:hover{
         background-color: $lightC;
         cursor: pointer;
@@ -106,9 +132,31 @@ body{
 }
 
 .warn{
-  background-color: red;
+  background-color: lighten(red, 7%);
+  border: 2px solid darken(red, 15%);
   position: absolute;
+  top: -20px;
   z-index: 1000;
+  left: 50%;
+  width: 80%;
+  padding: 3px 0;
+  font-size: 27px;
+  font-family: 'Droid Sans Mono', monospace;
+  margin-left: -40%;
+  &:hover{
+    cursor: pointer;
+    background-color: darken(red, 15%);
+  }
+  @media screen and (max-width: 900px) {
+    width: 90%;
+    margin-left: -45%;
+  }
+  .close{
+    float: right;
+    padding: 0 10px;
+    font-size: 39px;
+
+  }
 }
 
 .auth-title{
@@ -233,7 +281,7 @@ body{
   }
 }
 
-.content-edit{
+.content-change{
   width: 85%;
   height: 40vh;
   margin: 30px 0 0 0;
@@ -251,7 +299,7 @@ body{
   margin: 12px 0 0 3px;
 }
 
-.image-edit{
+.image-change{
   height: 30px;
   width: 220px;
   font-size: 20px;
@@ -305,7 +353,20 @@ body{
   margin: 10px 0 10px -40%;
   padding: 1.5%;
   text-align: left;
+  font-size: 20px;
   &:nth-child(1){
     margin-top: 30px;
   }
+}
+
+.new-chapter{
+  width: 150px;
+  height: 30px;
+  background-color: lighten($lightC, 15%);
+  border: none; 
+  font-size: 16px;
+  &:hover{
+    background-color: lighten($lightC, 25%);
+    cursor: pointer;
+  } 
 }
