@@ -10,6 +10,6 @@
 </div>
 <br>
 <div class="buttons">
-  <button class="button-1" ui-sref="chaptersEdit({ id: chaptersShow.selected._id })">Edit</button>
-  <button class="button-2" type="button" ng-click="chaptersShow.delete()">Delete</button>
+  <button ng-show="chaptersShow.whoOwns()" class="button-1" ui-sref="chaptersEdit({ id: chaptersShow.selected._id })">Edit</button>
+  <button ng-show="chaptersShow.whoOwns()" class="button-2" type="button" ng-click="chaptersShow.delete()">Delete</button>
 </div>
