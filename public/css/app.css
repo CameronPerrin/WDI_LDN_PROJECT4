@@ -147,6 +147,11 @@ body {
   font-size: 21px;
   text-align: center;
   background-color: #0A4474; }
+  .content img {
+    width: 100%; }
+    @media screen and (max-width: 600px) {
+      .content img {
+        width: 95%; } }
   @media screen and (max-width: 1000px) {
     .content {
       width: 700px;
@@ -211,35 +216,35 @@ body {
   font-size: 20px;
   padding: 20px; }
 
-.edit-buttons {
+.buttons {
   width: 80%;
   height: 50px;
   display: flex;
   position: relative;
   left: 50%;
   margin: 20px 0 0 -40%; }
-  .edit-buttons .save-edit {
+  .buttons .button-1 {
     flex: 1;
     border: none;
     margin: 0 15px 0 0;
     background-color: #0A4474;
     font-size: 30px; }
-    .edit-buttons .save-edit:hover {
+    .buttons .button-1:hover {
       cursor: pointer;
       background-color: #05335A; }
-    .edit-buttons .save-edit:active {
+    .buttons .button-1:active {
       background-color: #0A4474; }
-  .edit-buttons .cancel-edit {
+  .buttons .button-2 {
     flex: 1;
     background-color: green;
     border: none;
     margin: 0 0 0 15px;
     background-color: #0A4474;
     font-size: 30px; }
-    .edit-buttons .cancel-edit:hover {
+    .buttons .button-2:hover {
       cursor: pointer;
       background-color: #05335A; }
-    .edit-buttons .cancel-edit:active {
+    .buttons .button-2:active {
       background-color: #0A4474; }
 
 /*# sourceMappingURL=app.css.map */

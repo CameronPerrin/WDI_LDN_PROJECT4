@@ -176,6 +176,12 @@ body{
   font-size: 21px;
   text-align: center;
   background-color: $darkC;
+  img{
+    width: 100%;
+    @media screen and (max-width: 600px) {
+      width: 95%;
+    }
+  }
   @media screen and (max-width: 1000px) {
       width: 700px;
       margin-left: -370px;
@@ -251,14 +257,14 @@ body{
   padding: 20px;
 }
 
-.edit-buttons{
+.buttons{
   width: 80%;
   height: 50px;
   display: flex;
   position: relative;
   left: 50%;
   margin: 20px 0 0 -40%;
-  .save-edit{
+  .button-1{
     flex: 1;
     border: none;
     margin: 0 15px 0 0;
@@ -272,7 +278,7 @@ body{
       background-color: $darkC;
     }
   }
-  .cancel-edit{
+  .button-2{
     flex: 1;
     background-color: green;
     border: none;
