@@ -3,7 +3,7 @@
 </div>
 <!-- <div>{{ chaptersShow.selected.options }}</div> -->
 <div class="options">
-<div ng-repeat="option in chaptersShow.selected.options">
+<div ng-hide="chaptersShow.selected.endGame" ng-repeat="option in chaptersShow.selected.options">
   <div class="option" ng-if="option.owner" ui-sref="chaptersShow({ id: option._id })">{{ option.buttonText }}</div>
   <div class="option" ng-if="!option.owner" ui-sref="chaptersEdit({ id: option._id })">{{ option.buttonText }}</div>
 </div>

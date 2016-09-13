@@ -4,6 +4,7 @@ var secret = require('../config/tokens').secret;
 var usersController = require('../controllers/users');
 var chaptersController = require('../controllers/chapters');
 var authController = require('../controllers/authentications');
+var upload = require('./upload');
 
 function secureRoute(req, res, next) {
   if(!req.headers.authorization) return res.status(401).json({ message: "Unauthorized" });
@@ -33,13 +34,13 @@ router.route('/users/:id')
 router.route('/chapters')
   .all(secureRoute)
   .get(chaptersController.index)
-  .post(chaptersController.create);
+  .post(upload.single('image'), chaptersController.create);
 
 router.route('/chapters/:id')
   .all(secureRoute)
   .get(chaptersController.show)
-  .put(chaptersController.update)
-  .patch(chaptersController.update)
+  .put(upload.single('image'), chaptersController.update)
+  .patch(upload.single('image'), chaptersController.update)
   .delete(chaptersController.delete);
 
 router.post('/register', authController.register);

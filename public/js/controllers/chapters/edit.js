@@ -11,6 +11,9 @@ function ChaptersEditController(Chapter, $state, Chapter, TokenService) {
     this.user = TokenService.decodeToken();
     this.userId = this.user._id;
     this.selected.owner = this.userId;
+
+    delete this.selected.options;
+
     Chapter.update(this.selected, function() {
       $state.go('chaptersShow', $state.params);
     });

@@ -21,11 +21,11 @@ User.create({
     return mongoose.connection.close();
   }
   
-  console.log("User created!", user);
+  console.log("User created!", user.username);
 
   Chapter.create({
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image: "http://www.placecage.com/700/400",
+    topLevel: true,
     optionOneText: "Salvius",
     optionTwoText: "Dominus",
     owner: user
@@ -34,8 +34,7 @@ User.create({
       console.log("Err creating chapter", err);
       return mongoose.connection.close();
     }
-
-    console.log("Chapter created!", chapter);
+    console.log("Chapter created!", chapter.content);
     return mongoose.connection.close();
   });
 });

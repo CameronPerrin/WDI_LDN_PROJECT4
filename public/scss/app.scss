@@ -29,6 +29,7 @@ body{
   text-align: center;
   background-color: $lightC;
   font-family: 'EB Garamond', serif;
+  color: #050505
 }
 
 .navbar{
@@ -110,10 +111,6 @@ body{
   z-index: 1000;
 }
 
-.chapters{
-  margin: 20px;
-}
-
 .auth-title{
   position:relative;
   z-index: 1;
@@ -174,7 +171,7 @@ body{
   margin: 25px 0 0 -470px;
   padding: 20px;
   font-size: 21px;
-  text-align: center;
+  text-align: left;;
   background-color: $darkC;
   img{
     width: 100%;
@@ -195,12 +192,16 @@ body{
       margin-left: -50vw;
       padding: 20px 0;
   }
+  img{
+    text-align: center;
+  }
 }
 
 .options{
   display: inline-block;
+  position: relative;
   width: 900px;
-  padding: 20px;
+  padding: 20px 0;
   @media screen and (max-width: 1000px) {
       width: 700px;
   }
@@ -295,3 +296,16 @@ body{
   }
 }
 
+.chapters{
+  background-color: lighten($medC, 5%);
+  height: auto;
+  width: 77%;
+  position: relative;
+  left: 50%;
+  margin: 10px 0 10px -40%;
+  padding: 1.5%;
+  text-align: left;
+  &:nth-child(1){
+    margin-top: 30px;
+  }
+}

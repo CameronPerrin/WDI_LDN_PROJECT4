@@ -13,6 +13,8 @@ function chaptersIndex(req, res) {
 function chaptersCreate(req, res) {
   
   req.body.owner = req.user._id;
+
+  if(req.file) req.body.image = req.file.key;
   
   Chapter.create(req.body)
     .then(function(chapter) {
@@ -36,6 +38,9 @@ function chaptersShow(req, res) {
 }
 
 function chaptersUpdate(req, res) {
+
+  if(req.file) req.body.image = req.file.key;
+
   Chapter.findById(req.params.id)
     .then(function(chapter) {
       for(key in req.body) chapter[key] = req.body[key];
@@ -45,6 +50,7 @@ function chaptersUpdate(req, res) {
       return res.status(200).json(chapter);
     })
     .catch(function(err) {
+      console.log(err);
       return res.status(500).json(err);
     });
 }

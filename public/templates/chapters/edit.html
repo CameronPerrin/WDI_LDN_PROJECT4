@@ -4,9 +4,10 @@
 
   <input class="image-edit" type="file" file name="image" ng-model="chaptersEdit.selected.image" placeholder="Image">
 
-  <input class="optionOne" type="text" name="optionOneText" ng-model="chaptersEdit.selected.optionOneText" placeholder="Option One">
-  <input class="optionTwo" type="text" name="optionTwoText" ng-model="chaptersEdit.selected.optionTwoText" placeholder="Option Two">
+  <input ng-hide="chaptersEdit.selected.endGame" class="optionOne" type="text" name="optionOneText" ng-model="chaptersEdit.selected.optionOneText" placeholder="Option One">
+  <input ng-hide="chaptersEdit.selected.endGame" class="optionTwo" type="text" name="optionTwoText" ng-model="chaptersEdit.selected.optionTwoText" placeholder="Option Two">
   <br>
+  <label><input type="checkbox" name="endGame" ng-model="chaptersEdit.selected.endGame">Ends Game</label>
   <div class="buttons">
     <button class="button-1">Save</button>
     <button class="button-2" type="button" ui-sref="chaptersShow({ id: chaptersEdit.selected._id })">Cancel</button>
