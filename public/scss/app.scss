@@ -228,7 +228,7 @@ body{
 
 .content-edit{
   width: 85%;
-  height: 60vh;
+  height: 40vh;
   margin: 30px 0 0 0;
   padding: 20px;
 }
@@ -243,3 +243,49 @@ body{
   padding: 17px;
   margin: 12px 0 0 3px;
 }
+
+.image-edit{
+  height: 30px;
+  width: 220px;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.edit-buttons{
+  width: 80%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  left: 50%;
+  margin: 20px 0 0 -40%;
+  .save-edit{
+    flex: 1;
+    border: none;
+    margin: 0 15px 0 0;
+    background-color: $darkC;
+    font-size: 30px;
+    &:hover{
+      cursor: pointer;
+      background-color: $darkerC;
+    }
+    &:active{
+      background-color: $darkC;
+    }
+  }
+  .cancel-edit{
+    flex: 1;
+    background-color: green;
+    border: none;
+    margin: 0 0 0 15px;
+    background-color: $darkC;
+    font-size: 30px;
+    &:hover{
+      cursor: pointer;
+      background-color: $darkerC;
+    }
+    &:active{
+      background-color: $darkC;
+    }
+  }
+}
+

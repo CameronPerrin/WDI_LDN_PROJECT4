@@ -192,7 +192,7 @@ body {
 
 .content-edit {
   width: 85%;
-  height: 60vh;
+  height: 40vh;
   margin: 30px 0 0 0;
   padding: 20px; }
 
@@ -204,5 +204,42 @@ body {
   width: 80%;
   padding: 17px;
   margin: 12px 0 0 3px; }
+
+.image-edit {
+  height: 30px;
+  width: 220px;
+  font-size: 20px;
+  padding: 20px; }
+
+.edit-buttons {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  left: 50%;
+  margin: 20px 0 0 -40%; }
+  .edit-buttons .save-edit {
+    flex: 1;
+    border: none;
+    margin: 0 15px 0 0;
+    background-color: #0A4474;
+    font-size: 30px; }
+    .edit-buttons .save-edit:hover {
+      cursor: pointer;
+      background-color: #05335A; }
+    .edit-buttons .save-edit:active {
+      background-color: #0A4474; }
+  .edit-buttons .cancel-edit {
+    flex: 1;
+    background-color: green;
+    border: none;
+    margin: 0 0 0 15px;
+    background-color: #0A4474;
+    font-size: 30px; }
+    .edit-buttons .cancel-edit:hover {
+      cursor: pointer;
+      background-color: #05335A; }
+    .edit-buttons .cancel-edit:active {
+      background-color: #0A4474; }
 
 /*# sourceMappingURL=app.css.map */
