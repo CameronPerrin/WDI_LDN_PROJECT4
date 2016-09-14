@@ -30,6 +30,7 @@
 <!-- <div class="no-scroll-wrapper"> -->
 <body ng-controller="MainController as main">
   <header class="navbar">
+    <p class="username" ng-if="main.currentUser.username">{{ main.currentUser.username }}</p>
     <h1 ui-sref="chaptersIndex">Choosite</h1>
     <div class="hamburger" ng-click="main.hamburgerOpen()">☰</div>
     <div class="hamburger-menu" ng-class="{ right: main.sesame }">

@@ -214,9 +214,9 @@ body {
       margin-left: -270px; } }
   @media screen and (max-width: 600px) {
     .content {
-      width: 100vw;
+      width: 94vw;
       margin-left: -50vw;
-      padding: 20px 0; } }
+      padding: 20px 3vw; } }
   .content img {
     text-align: center; }
 
@@ -235,7 +235,7 @@ body {
       width: 500px; } }
   @media screen and (max-width: 600px) {
     .options {
-      width: 100vw;
+      width: 100%;
       padding: 0; } }
   .options div .option {
     width: 100%;
@@ -340,6 +340,9 @@ body {
       padding: 4%; } }
   .chapters:nth-child(1) {
     margin-top: 30px; }
+  .chapters:hover {
+    cursor: pointer;
+    background-color: #e7b68c; }
 
 .new-chapter {
   width: 150px;
@@ -394,5 +397,19 @@ body {
   position: absolute;
   width: 100vw;
   top: 5px; }
+
+.username {
+  color: #F2F2F2;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px; }
+  @media screen and (max-width: 420px) {
+    .username {
+      bottom: 0;
+      height: auto; } }
 
 /*# sourceMappingURL=app.css.map */

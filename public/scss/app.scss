@@ -253,9 +253,9 @@ body{
       margin-left: -270px;
   }
   @media screen and (max-width: 600px) {
-      width: 100vw;
+      width: 94vw;
       margin-left: -50vw;
-      padding: 20px 0;
+      padding: 20px 3vw;
   }
   img{
     text-align: center;
@@ -276,7 +276,7 @@ body{
       width: 500px;
   }
   @media screen and (max-width: 600px) {
-      width: 100vw;
+      width: 100%;
       padding: 0;
   }
   div{
@@ -400,6 +400,10 @@ body{
   &:nth-child(1){
     margin-top: 30px;
   }
+  &:hover{
+    cursor: pointer;
+    background-color: darken($medC, 15%);
+  }
 }
 
 .new-chapter{
@@ -411,7 +415,7 @@ body{
   &:hover{
     background-color: lighten($lightC, 25%);
     cursor: pointer;
-  } 
+  }
 }
 
 .about-page{
@@ -463,4 +467,19 @@ body{
   position: absolute;
   width: 100vw;
   top: 5px;
+}
+
+.username{
+  color: #F2F2F2;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  @media screen and (max-width: 420px) {
+    bottom: 0;
+    height: auto;
+  }
 }

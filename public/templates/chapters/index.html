@@ -1,5 +1,5 @@
 <button class="new-chapter" ui-sref="chaptersNew">Start a new Story</button>
-
+<p>click on a paragraph to start that story.</p>
 <div>
   <div ng-repeat="chapter in chaptersIndex.all" ui-sref="chaptersShow({ id: chapter._id })">
     <div class="chapters" ng-if="chapter.topLevel">
