@@ -6,8 +6,9 @@ $medC: #135891;
 $darkC: #0A4474;
 $darkerC: #05335A;
 
-html{
-  overflow-x: hidden
+body{
+  overflow-x: hidden;
+  position: fixed;
 }
 
 main{
@@ -370,3 +371,4 @@ body{
     cursor: pointer;
   } 
 }
+

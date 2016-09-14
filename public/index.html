@@ -6,6 +6,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.min.js"></script>
   <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
   <script src="/js/client.js"></script>
   <script src="/js/controllers/main.js"></script>
   <script src="/js/controllers/authentications/login.js"></script>
@@ -25,25 +26,27 @@
   <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|EB+Garamond" rel="stylesheet">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<!-- <div class="no-scroll-wrapper"> -->
 <body ng-controller="MainController as main">
   <header class="navbar">
     <h1 ui-sref="chaptersIndex">Choosite</h1>
     <div class="hamburger" ng-click="main.hamburgerOpen()">☰</div>
     <div class="hamburger-menu" ng-class="{ right: main.sesame }">
-      <div ng-if="!main.currentUser" ui-sref="login">
+      <div ng-if="!main.currentUser" ui-sref="login" ng-click="main.hamburgerOpen()">
         login
       </div>
-      <div ng-if="!main.currentUser" ui-sref="register">
+      <div ng-if="!main.currentUser" ui-sref="register" ng-click="main.hamburgerOpen()">
         register
       </div>
-      <div href="#" ng-if="main.currentUser" ui-sref="register" ng-click="main.logout()">
+      <div href="#" ng-if="main.currentUser" ui-sref="register" ng-click="main.logout(); main.hamburgerOpen()">
         logout
       </div>
-      <div ui-sref="home">
+      <div ui-sref="home" ng-click="main.hamburgerOpen()">
         home
       </div>
-      <div ui-sref="chaptersIndex">
+      <div ui-sref="chaptersIndex" ng-click="main.hamburgerOpen()">
         chapters
       </div>
     </div>
@@ -72,4 +75,5 @@
     <main ui-view></main>
   </main>
 </body>
+<!-- </div> -->
 </html>

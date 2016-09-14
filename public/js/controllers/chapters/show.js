@@ -2,10 +2,12 @@ angular
   .module('Choosite')
   .controller("ChaptersShowController", ChaptersShowController);
 
-ChaptersShowController.$inject = ["Chapter", "$state","TokenService"];
+ChaptersShowController.$inject = ["Chapter", "$state", "TokenService"];
 function ChaptersShowController(Chapter, $state, TokenService) {
   this.selected = Chapter.get($state.params);
 
+  // this.pageClass = 'chapter-show-page'
+  
   this.delete = function() {
     this.selected.$delete(function() {
       $state.go("chaptersIndex");

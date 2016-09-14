@@ -7,6 +7,8 @@ function ChaptersEditController(Chapter, $state, Chapter, TokenService) {
 
   this.selected = Chapter.get($state.params);
   
+  // this.pageClass = 'chapter-edit-page'
+
   this.save = function() {
     this.user = TokenService.decodeToken();
     this.userId = this.user._id;
