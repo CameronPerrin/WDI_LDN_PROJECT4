@@ -230,7 +230,7 @@ body{
   padding: 20px;
   font-size: 21px;
   text-align: left;
-  background-color: $darkC;
+  background-color: darken($medC, 5%);
   img{
     width: 100%;
     @media screen and (max-width: 600px) {
@@ -282,20 +282,20 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: $darkC;
+      background-color: darken($medC, 5%);
       &:hover{
         cursor: pointer;
-        background-color: $darkerC;
+        background-color: darken($medC, 15%);
       }
       &:active{
-        background-color: $darkC;
+        background-color: darken($medC, 5%);
       }
     }
   }
 }
 
 .content-change{
-  resize: vertical;
+  resize: none;
   width: 85%;
   height: 40vh;
   margin: 30px 0 0 0;
