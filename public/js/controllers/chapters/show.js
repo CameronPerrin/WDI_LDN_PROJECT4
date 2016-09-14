@@ -18,7 +18,9 @@ function ChaptersShowController(Chapter, $state, TokenService) {
   this.currentUser = TokenService.decodeToken();
 
   this.whoOwns = function whoOwns() {
-    if(this.currentUser.username === "Slowly Smiles") {
+    if(this.currentUser === null){
+      return false;
+    } else if(this.currentUser.username === "Slowly Smiles") {
       return true;
     } else if(this.currentUser._id === this.selected.owner) {
       return true;

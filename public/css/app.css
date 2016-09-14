@@ -391,4 +391,9 @@ body {
     font-size: 18px;
     margin: 0 35px 15px 35px; }
 
+.reminder {
+  position: absolute;
+  width: 100vw;
+  top: 5px; }
+
 /*# sourceMappingURL=app.css.map */

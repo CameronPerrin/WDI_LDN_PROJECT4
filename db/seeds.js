@@ -10,7 +10,7 @@ User.collection.drop();
 
 console.log("Chapters and users dropped!");
 
-//USER CAMERON ==============================================================
+//USER Cameron Perrin ========================================================
 var cameron = new User({
   username: "Cameron Perrin",
   email: "perrin.cameron@gmail.com.com",
@@ -22,6 +22,8 @@ cameron.save(function(err, user) {
   console.log(user.username, "created");
   mongoose.connection.close();
 });
+//============================================================================
+
 
 
 var chapter1_1_1 = new Chapter({

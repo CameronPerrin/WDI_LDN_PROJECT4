@@ -33,6 +33,6 @@ function MainController(TokenService, $state, $rootScope) {
 
   $rootScope.$on("unauthorized", function() {
     $state.go("login");
-    self.errorMessage = "You must be logged in to see the chapters"
+    self.errorMessage = "You must be logged in to do that!"
   });
 }

@@ -15,6 +15,9 @@ function ChaptersEditController(Chapter, $state, Chapter, TokenService) {
 
   this.save = function() {
     this.user = TokenService.decodeToken();
+    if(this.user === null){
+      return $state.go('register', $state.params);
+    } 
     this.userId = this.user._id;
     this.selected.owner = this.userId;
 

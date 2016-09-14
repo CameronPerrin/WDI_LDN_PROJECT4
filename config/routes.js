@@ -32,12 +32,14 @@ router.route('/users/:id')
   .delete(usersController.delete);
 
 router.route('/chapters')
-  .all(secureRoute)
+  .post(secureRoute)
   .get(chaptersController.index)
   .post(upload.single('image'), chaptersController.create);
 
 router.route('/chapters/:id')
-  .all(secureRoute)
+  .put(secureRoute)
+  .patch(secureRoute)
+  .delete(secureRoute)
   .get(chaptersController.show)
   .put(upload.single('image'), chaptersController.update)
   .patch(upload.single('image'), chaptersController.update)
