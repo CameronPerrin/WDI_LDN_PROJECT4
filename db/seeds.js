@@ -13,7 +13,7 @@ console.log("Chapters and users dropped!");
 //USER Cameron Perrin ========================================================
 var cameron = new User({
   username: "Cameron Perrin",
-  email: "perrin.cameron@gmail.com.com",
+  email: "perrin.cameron@gmail.com",
   password: "password",
   passwordConfirmation: "password"
 });
