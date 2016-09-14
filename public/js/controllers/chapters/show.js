@@ -22,7 +22,7 @@ function ChaptersShowController(Chapter, $state, TokenService) {
       return false;
     } else if(this.currentUser.username === "Slowly Smiles") {
       return true;
-    } else if(this.currentUser._id === this.selected.owner) {
+    } else if(this.currentUser._id === this.selected.owner._id) {
       return true;
     } else {
       return false;
