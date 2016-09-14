@@ -28,6 +28,7 @@ function chaptersCreate(req, res) {
 function chaptersShow(req, res) {
   Chapter.findById(req.params.id)
     .populate('options')
+    .populate('owner')
     .then(function(chapter) {
       if(!chapter) return res.status(404).json({ message: "Could not find a chapter with that id" });
       return res.status(200).json(chapter);

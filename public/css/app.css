@@ -198,6 +198,12 @@ body {
     @media screen and (max-width: 600px) {
       .content img {
         width: 95%; } }
+  .content p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 18px; }
   @media screen and (max-width: 1000px) {
     .content {
       width: 700px;

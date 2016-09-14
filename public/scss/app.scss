@@ -237,6 +237,13 @@ body{
       width: 95%;
     }
   }
+  p{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 18px;
+  }
   @media screen and (max-width: 1000px) {
       width: 700px;
       margin-left: -370px;
