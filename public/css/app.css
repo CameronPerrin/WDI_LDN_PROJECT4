@@ -11,20 +11,23 @@ main {
 
 .left {
   left: -320px !important; }
-  @media screen and (min-width: 651px) {
+  @media screen and (min-width: 751px) {
     .left {
       left: 0px !important; } }
 
+.right {
+  right: -320px !important; }
+
 body {
   text-align: center;
-  background-color: #4E83AF;
+  background-color: #F8EEE7;
   font-family: 'EB Garamond', serif;
-  color: #050505; }
+  color: #020202; }
 
 .navbar {
   width: 100vw;
   height: 30px;
-  background-color: #135891;
+  background-color: #49274A;
   position: relative;
   box-shadow: 0px 0px 5px #000000;
   z-index: 999; }
@@ -32,6 +35,7 @@ body {
     .navbar {
       height: 50px; } }
   .navbar h1 {
+    color: #F2F2F2;
     text-align: center;
     font-size: 28px;
     font-family: 'Droid Sans Mono', monospace;
@@ -46,6 +50,7 @@ body {
         padding: 5px 0 0 0; } }
   .navbar .hamburger {
     position: absolute;
+    color: #F2F2F2;
     top: 0;
     right: 0;
     height: 100%;
@@ -64,7 +69,7 @@ body {
   .navbar .hamburger-menu {
     height: 100vh;
     width: 320px;
-    background-color: #135891;
+    background-color: #F4DECB;
     position: absolute;
     top: 50px;
     right: 0;
@@ -82,7 +87,7 @@ body {
       align-items: center;
       font-size: 30px; }
       .navbar .hamburger-menu div:hover {
-        background-color: #4E83AF;
+        background-color: #F8EEE7;
         cursor: pointer; }
   .navbar ul {
     top: 0;
@@ -102,13 +107,12 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 23px; }
+      font-size: 23px;
+      color: #F2F2F2; }
       .navbar ul li:hover {
-        background-color: #4E83AF;
-        cursor: pointer; }
-
-.right {
-  right: -320px !important; }
+        background-color: #F8EEE7;
+        cursor: pointer;
+        color: #020202; }
 
 .warn {
   background-color: #ff2424;
@@ -140,7 +144,7 @@ body {
   font-size: 20px; }
 
 .authentication {
-  background-color: #0A4474;
+  background-color: #94618E;
   width: 40%;
   height: 100vh;
   position: absolute;
@@ -175,9 +179,9 @@ body {
     border: 0;
     position: relative;
     z-index: 0;
-    background-color: #4E83AF; }
+    background-color: #F8EEE7; }
     .authentication .auth-submit:hover {
-      background-color: #135891;
+      background-color: #F4DECB;
       cursor: pointer; }
 
 .content {
@@ -188,7 +192,7 @@ body {
   padding: 20px;
   font-size: 21px;
   text-align: left;
-  background-color: #0A4474; }
+  background-color: #94618E; }
   .content img {
     width: 100%; }
     @media screen and (max-width: 600px) {
@@ -236,14 +240,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0A4474; }
+    background-color: #94618E; }
     .options div .option:hover {
       cursor: pointer;
-      background-color: #05335A; }
+      background-color: #49274A; }
     .options div .option:active {
-      background-color: #0A4474; }
+      background-color: #94618E; }
 
 .content-change {
+  resize: vertical;
   width: 85%;
   height: 40vh;
   margin: 30px 0 0 0;
@@ -287,28 +292,28 @@ body {
     flex: 1;
     border: none;
     margin: 0 15px 0 0;
-    background-color: #0A4474;
+    background-color: #94618E;
     font-size: 30px; }
     .buttons .button-1:hover {
       cursor: pointer;
-      background-color: #05335A; }
+      background-color: #49274A; }
     .buttons .button-1:active {
-      background-color: #0A4474; }
+      background-color: #94618E; }
   .buttons .button-2 {
     flex: 1;
     background-color: green;
     border: none;
     margin: 0 0 0 15px;
-    background-color: #0A4474;
+    background-color: #94618E;
     font-size: 30px; }
     .buttons .button-2:hover {
       cursor: pointer;
-      background-color: #05335A; }
+      background-color: #49274A; }
     .buttons .button-2:active {
-      background-color: #0A4474; }
+      background-color: #94618E; }
 
 .chapters {
-  background-color: #1666a8;
+  background-color: #f0d1b6;
   height: auto;
   width: 77%;
   position: relative;
@@ -334,11 +339,33 @@ body {
 .new-chapter {
   width: 150px;
   height: 30px;
-  background-color: #82a8c7;
+  background-color: white;
   border: none;
   font-size: 16px; }
   .new-chapter:hover {
-    background-color: #a5c1d7;
+    background-color: white;
     cursor: pointer; }
+
+.about-page {
+  width: 60%;
+  padding: 0 20%; }
+  @media screen and (max-width: 900px) {
+    .about-page {
+      width: 80%;
+      padding: 0 10%; } }
+  .about-page div {
+    width: 300px;
+    height: 50px;
+    position: relative;
+    left: 50%;
+    margin-left: -150px;
+    background-color: #f0d1b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px; }
+    .about-page div:hover {
+      background-color: #e7b68c;
+      cursor: pointer; }
 
 /*# sourceMappingURL=app.css.map */

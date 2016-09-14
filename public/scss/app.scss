@@ -1,10 +1,15 @@
 // font-family: 'EB Garamond', serif;
 // font-family: 'Droid Sans Mono', monospace;
 
-$lightC: #4E83AF;
-$medC: #135891;
-$darkC: #0A4474;
-$darkerC: #05335A;
+// $lightC: #4E83AF;
+// $medC: #135891;
+// $darkC: #0A4474;
+// $darkerC: #05335A;
+
+$lightC: #F8EEE7;
+$medC: #F4DECB;
+$darkC: #94618E;
+$darkerC: #49274A;
 
 body{
   overflow-x: hidden;
@@ -21,22 +26,26 @@ main{
 
 .left{
   left: -320px !important;
-  @media screen and (min-width: 651px) {
+  @media screen and (min-width: 751px) {
     left: 0px !important;
   }
+}
+
+.right{
+  right: -320px !important;
 }
 
 body{
   text-align: center;
   background-color: $lightC;
   font-family: 'EB Garamond', serif;
-  color: #050505
+  color: #020202
 }
 
 .navbar{
   width: 100vw;
   height: 30px;
-  background-color: $medC;
+  background-color: $darkerC;
   position:relative;
   box-shadow: 0px 0px 5px #000000;
   z-index: 999;
@@ -44,6 +53,7 @@ body{
     height: 50px;
   }
   h1{
+    color: #F2F2F2;
     text-align: center;
     font-size: 28px;
     font-family: 'Droid Sans Mono', monospace;
@@ -65,6 +75,7 @@ body{
       display: none;
     }
     position: absolute;
+    color: #F2F2F2;
     top: 0;
     right: 0;
     height: 100%;
@@ -120,16 +131,14 @@ body{
       justify-content: center;
       align-items: center;
       font-size: 23px;
+      color: #F2F2F2;
       &:hover{
         background-color: $lightC;
         cursor: pointer;
+        color: #020202;
       }
     }
   }
-}
-
-.right{
-  right: -320px !important;
 }
 
 .warn{
@@ -286,6 +295,7 @@ body{
 }
 
 .content-change{
+  resize: vertical;
   width: 85%;
   height: 40vh;
   margin: 30px 0 0 0;
@@ -361,7 +371,7 @@ body{
 }
 
 .chapters{
-  background-color: lighten($medC, 5%);
+  background-color: darken($medC, 5%);
   height: auto;
   width: 77%;
   position: relative;
@@ -396,5 +406,30 @@ body{
     background-color: lighten($lightC, 25%);
     cursor: pointer;
   } 
+}
+
+.about-page{
+  width: 60%;
+  padding: 0 20%;
+  @media screen and (max-width: 900px) {
+    width: 80%;
+    padding: 0 10%;
+  }
+  div{
+    width: 300px;
+    height: 50px;
+    position: relative;
+    left: 50%;
+    margin-left: -150px;
+    background-color: darken($medC, 5%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    &:hover{
+      background-color: darken($medC, 15%);
+      cursor: pointer;
+    }
+  }
 }
 
