@@ -220,7 +220,7 @@ body{
   margin: 25px 0 0 -470px;
   padding: 20px;
   font-size: 21px;
-  text-align: left;;
+  text-align: left;
   background-color: $darkC;
   img{
     width: 100%;
@@ -231,6 +231,7 @@ body{
   @media screen and (max-width: 1000px) {
       width: 700px;
       margin-left: -370px;
+      font-size: 25px;
   }
   @media screen and (max-width: 800px) {
       width: 500px;
@@ -251,8 +252,10 @@ body{
   position: relative;
   width: 900px;
   padding: 20px 0;
+  font-size: 21px;
   @media screen and (max-width: 1000px) {
       width: 700px;
+      font-size: 25px;
   }
   @media screen and (max-width: 800px) {
       width: 500px;
@@ -287,17 +290,29 @@ body{
   height: 40vh;
   margin: 30px 0 0 0;
   padding: 20px;
+  font-size: 16px;
+  @media screen and (max-width: 1000px) {
+    font-size: 20px;
+  }
 }
 
 .optionOne{
   width: 80%;
   padding: 17px;
+  font-size: 16px;
+  @media screen and (max-width: 1000px) {
+    font-size: 20px;
+  }
 }
 
 .optionTwo{
   width: 80%;
   padding: 17px;
-  margin: 12px 0 0 3px;
+  margin: 12px 0 0 0;
+  font-size: 16px;
+  @media screen and (max-width: 1000px) {
+    font-size: 20px;
+  }
 }
 
 .image-change{
@@ -355,6 +370,17 @@ body{
   padding: 1.5%;
   text-align: left;
   font-size: 20px;
+  @media screen and (max-width: 900px) {
+    font-size: 25px;
+    width: 94%;
+    left: 0;
+    margin: 10px 0;
+    padding: 3%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 92%;
+    padding: 4%;
+  }
   &:nth-child(1){
     margin-top: 30px;
   }

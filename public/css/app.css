@@ -197,7 +197,8 @@ body {
   @media screen and (max-width: 1000px) {
     .content {
       width: 700px;
-      margin-left: -370px; } }
+      margin-left: -370px;
+      font-size: 25px; } }
   @media screen and (max-width: 800px) {
     .content {
       width: 500px;
@@ -214,10 +215,12 @@ body {
   display: inline-block;
   position: relative;
   width: 900px;
-  padding: 20px 0; }
+  padding: 20px 0;
+  font-size: 21px; }
   @media screen and (max-width: 1000px) {
     .options {
-      width: 700px; } }
+      width: 700px;
+      font-size: 25px; } }
   @media screen and (max-width: 800px) {
     .options {
       width: 500px; } }
@@ -244,16 +247,28 @@ body {
   width: 85%;
   height: 40vh;
   margin: 30px 0 0 0;
-  padding: 20px; }
+  padding: 20px;
+  font-size: 16px; }
+  @media screen and (max-width: 1000px) {
+    .content-change {
+      font-size: 20px; } }
 
 .optionOne {
   width: 80%;
-  padding: 17px; }
+  padding: 17px;
+  font-size: 16px; }
+  @media screen and (max-width: 1000px) {
+    .optionOne {
+      font-size: 20px; } }
 
 .optionTwo {
   width: 80%;
   padding: 17px;
-  margin: 12px 0 0 3px; }
+  margin: 12px 0 0 0;
+  font-size: 16px; }
+  @media screen and (max-width: 1000px) {
+    .optionTwo {
+      font-size: 20px; } }
 
 .image-change {
   height: 30px;
@@ -302,6 +317,17 @@ body {
   padding: 1.5%;
   text-align: left;
   font-size: 20px; }
+  @media screen and (max-width: 900px) {
+    .chapters {
+      font-size: 25px;
+      width: 94%;
+      left: 0;
+      margin: 10px 0;
+      padding: 3%; } }
+  @media screen and (max-width: 500px) {
+    .chapters {
+      width: 92%;
+      padding: 4%; } }
   .chapters:nth-child(1) {
     margin-top: 30px; }
 
