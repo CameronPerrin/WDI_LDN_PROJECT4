@@ -1,17 +1,17 @@
-angular
-  .module('Choosite')
-  .factory('formData', formData);
+// angular
+//   .module('Choosite')
+//   .factory('formData', formData);
 
-function formData() {
-  return {
-    transform: function(data) {
-      var formData = new FormData();
-      angular.forEach(data, function(value, key) {
-        if(value._id) value = value._id;
-        if(!key.match(/^\$/)) formData.append(key, value);
-      });
+// function formData() {
+//   return {
+//     transform: function(data) {
+//       var formData = new FormData();
+//       angular.forEach(data, function(value, key) {
+//         if(value._id) value = value._id;
+//         if(!key.match(/^\$/)) formData.append(key, value);
+//       });
 
-      return formData;
-    }
-  }
-}
+//       return formData;
+//     }
+//   }
+// }
