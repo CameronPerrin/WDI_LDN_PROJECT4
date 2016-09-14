@@ -6,6 +6,10 @@ ChaptersEditController.$inject = ["Chapter", "$state", "Chapter", "TokenService"
 function ChaptersEditController(Chapter, $state, Chapter, TokenService) {
 
   this.selected = Chapter.get($state.params);
+
+  this.cancel = function() {
+    window.history.back();
+  }
   
   // this.pageClass = 'chapter-edit-page'
 

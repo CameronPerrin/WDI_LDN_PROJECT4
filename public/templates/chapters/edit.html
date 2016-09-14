@@ -10,6 +10,6 @@
   <label><input type="checkbox" name="endGame" ng-model="chaptersEdit.selected.endGame">Ends Game</label>
   <div class="buttons">
     <button class="button-1">Save</button>
-    <button class="button-2" type="button" ui-sref="chaptersShow({ id: chaptersEdit.selected._id })">Cancel</button>
+    <button class="button-2" type="button" ng-click="chaptersEdit.cancel()">Back</button>
   </div>
 </form>
