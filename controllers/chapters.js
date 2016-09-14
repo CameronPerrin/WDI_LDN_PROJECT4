@@ -59,6 +59,7 @@ function chaptersUpdate(req, res) {
 function chaptersDelete(req, res) {
   Chapter.findById(req.params.id)
     .then(function(chapter) {
+      // req.params.content
       return chapter.remove();
     })
     .then(function() {
