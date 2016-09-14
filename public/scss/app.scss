@@ -422,6 +422,10 @@ body{
     width: 80%;
     padding: 0 10%;
   }
+  @media screen and (max-width: 550px) {
+    width: 90%;
+    padding: 0 5%;
+  }
   div{
     width: 300px;
     height: 50px;
@@ -437,6 +441,22 @@ body{
       background-color: darken($medC, 15%);
       cursor: pointer;
     }
+  }
+  h2{
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: 'Droid Sans Mono', monospace;
+  }
+  h3{
+    text-align: left;
+    margin: 15px 0 0 20px;
+    font-size: 23px;
+    font-family: 'Droid Sans Mono', monospace;
+  }
+  p{
+    text-align: left;
+    font-size: 18px;
+    margin: 0 35px 15px 35px;
   }
 }
 

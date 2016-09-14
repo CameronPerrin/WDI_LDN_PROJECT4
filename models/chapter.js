@@ -8,6 +8,7 @@ var chapterSchema = new mongoose.Schema({
   buttonText: { type: String },
   topLevel: { type: Boolean, default: true },
   endGame: { type: Boolean, default: false },
+  seeding: { type: Boolean, default: false },
   owner: { type: mongoose.Schema.ObjectId, ref: "User" }
 });
 
@@ -30,6 +31,8 @@ chapterSchema.virtual('optionTwoText')
   });
 
 chapterSchema.pre('save', function(next) {
+  if(this.seeding) return next();
+
   var doc = this;
 
   if(!this.content && !this.owner){
@@ -49,7 +52,6 @@ chapterSchema.pre('save', function(next) {
     doc.options = emptyChapters;
     return next();
   });
-
 });
 
 chapterSchema.set('toJSON', { getters: true });
