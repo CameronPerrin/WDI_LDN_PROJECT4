@@ -11,8 +11,15 @@ $medC: #F4DECB;
 $darkC: #94618E;
 $darkerC: #49274A;
 
-body{
+.wrapper{
   overflow-x: hidden;
+  &::-webkit-scrollbar { 
+    display: none; 
+  }
+}
+
+body{
+  // overflow-x: hidden;
 }
 
 main{

@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="/css/app.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<!-- <div class="no-scroll-wrapper"> -->
+<div class="wrapper">
 <body ng-controller="MainController as main">
   <header class="navbar">
     <p class="username" ng-if="main.currentUser.username">{{ main.currentUser.username }}</p>
@@ -75,5 +75,5 @@
     <main ui-view></main>
   </main>
 </body>
-<!-- </div> -->
+</div>
 </html>

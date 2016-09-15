@@ -15,14 +15,18 @@ function chaptersCreate(req, res) {
   req.body.owner = req.user._id;
 
   if(req.file) req.body.image = req.file.key;
-  
-  Chapter.create(req.body)
-    .then(function(chapter) {
-      return res.status(201).json(chapter);
-    })
-    .catch(function(err) {
-      return res.status(400).json(err);
-    })
+
+  if(req.body.content.length < 5000){
+    Chapter.create(req.body)
+      .then(function(chapter) {
+        return res.status(201).json(chapter);
+      })
+      .catch(function(err) {
+        return res.status(400).json(err);
+      })
+  } else {
+    return res.status(413).json()
+  }
 }
 
 function chaptersShow(req, res) {
@@ -42,6 +46,7 @@ function chaptersUpdate(req, res) {
 
   if(req.file) req.body.image = req.file.key;
 
+  if(req.body.content.length < 5000){
   Chapter.findById(req.params.id)
     .then(function(chapter) {
       for(key in req.body) chapter[key] = req.body[key];
@@ -54,6 +59,9 @@ function chaptersUpdate(req, res) {
       console.log(err);
       return res.status(500).json(err);
     });
+  } else {
+    return res.status(413).json()
+  }
 }
 
 function chaptersDelete(req, res) {

@@ -1,5 +1,7 @@
-body {
+.wrapper {
   overflow-x: hidden; }
+  .wrapper::-webkit-scrollbar {
+    display: none; }
 
 main {
   position: relative;
