@@ -75,7 +75,6 @@ var chapter1_1_2_2 = new Chapter({
   buttonText: "go peacefully",
   content: "They grab you by your arms and you willingly walk with them. They bring to a large palace made of what looks like sandstone. The entrance room is alrge and filled with many doors. The guards take you through on of these dooors. There is a man waiting on the other side sitting in a highchair behind a  booth. He has on a uniform that makes him look like he is in a marching band. One of the guards says, 'This man was caught making a scene.' The other guard explains, 'He was yelling and shouting at citizens.' The figure behind the booth asks, 'is he wounded?' You look down to see a large blood stain on your torso. 'No', the guard explains. the figure gestures for them to move you away and says, 'give him 4 days in jail, if he has friends they will come get him.' Before you can respond the guards move out the door and into another. This room is a long hallway with cells on either side as far as the eye can see. you hear distant screams.",
   topLevel: false,
-  image: ""
   optionOneText: "Fight their attempt to jail you",
   optionTwoText: "Accept your fate and let them take you to your cell",
   owner: cameron
