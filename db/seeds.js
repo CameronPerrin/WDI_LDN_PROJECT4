@@ -27,7 +27,7 @@ cameron.save(function(err, user) {
 
 var chapter1_1_1_2 = new Chapter({
   buttonText: "ask them who they are",
-  content: "They introduce themselves left to right. The tallest tan one with blond hair introduces himslef as Ed. The tall curly haired one introduces himself as Jeremy. The shorter one with long red hair introduces her self as Bex. BEfore you can say anything a fourth person steps from the shadows and introduces himslef as Shu. He has short black hair and thin glasses. 'We are zombie hunters welcome Kobus', explains Shu. 'How does he know my name!', you think.",
+  content: "They introduce themselves left to right. The tallest tan one with blond hair introduces himslef as Ed. The tall curly haired one introduces himself as Jeremy. The shorter one with long red hair introduces her self as Bex. Before you can say anything a fourth person steps from the shadows and introduces himslef as Shu. He has short black hair and thin glasses. 'We are zombie hunters welcome Kobus', explains Shu. 'How does he know my name!', you think.",
   topLevel: false,
   optionOneText: "Ask them for their help",
   optionTwoText: "Find a way to escape",
@@ -73,7 +73,7 @@ chapter1_1_1.save(function(err, chapter) {
 
 var chapter1_1_2_2 = new Chapter({
   buttonText: "go peacefully",
-  content: "They grab you by your arms and you willingly walk with them. They bring to a large palace made of what looks like sandstone. The entrance room is alrge and filled with many doors. The guards take you through on of these dooors. There is a man waiting on the other side sitting in a highchair behind a  booth. He has on a uniform that makes him look like he is in a marching band. One of the guards says, 'This man was caught making a scene.' The other guard explains, 'He was yelling and shouting at citizens.' The figure behind the booth asks, 'is he wounded?' You look down to see a large blood stain on your torso. 'No', the guard explains. the figure gestures for them to move you away and says, 'give him 4 days in jail, if he has friends they will come get him.' Before you can respond the guards move out the door and into another. This room is a long hallway with cells on either side as far as the eye can see. you hear distant screams.",
+  content: "They grab you by your arms and you willingly walk with them. They bring to a large palace made of what looks like sandstone. The entrance room is large and filled with many doors. The guards take you through one of these doors. There is a man waiting on the other side sitting in a highchair behind a  booth. He has on a uniform that makes him look like he is in a marching band. One of the guards says, 'This man was caught making a scene.' The other guard explains, 'He was yelling and shouting at citizens.' The figure behind the booth asks, 'is he wounded?' You look down to see a large blood stain on your torso suprises you. 'No', the guard explains. the figure gestures for them to move you away and says, 'give him 4 days in jail, if he has friends they will come get him.' Before you can respond the guards move out the door and into another. This room is a long hallway with cells on either side as far as the eye can see. you hear distant screams.",
   topLevel: false,
   optionOneText: "Fight their attempt to jail you",
   optionTwoText: "Accept your fate and let them take you to your cell",
