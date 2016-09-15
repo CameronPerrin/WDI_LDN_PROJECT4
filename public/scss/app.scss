@@ -232,6 +232,7 @@ body{
   background-color: darken($medC, 5%);
   img{
     width: 100%;
+    margin: 20px 0 5px 0;
     @media screen and (max-width: 600px) {
       width: 95%;
     }

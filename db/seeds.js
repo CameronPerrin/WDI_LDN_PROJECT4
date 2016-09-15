@@ -246,6 +246,7 @@ var chapter1 = new Chapter({
   topLevel: true,
   optionOneText: chapter1_1.buttonText,
   optionTwoText: chapter1_2.buttonText,
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/04a1e9c0-7a93-11e6-841c-39757e3a64b6.jpg",
   seeding: true,
   owner: cameron,
   options: [
