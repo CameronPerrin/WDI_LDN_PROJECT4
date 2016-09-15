@@ -4,6 +4,7 @@ angular
 
 ChaptersShowController.$inject = ["Chapter", "$state", "TokenService"];
 function ChaptersShowController(Chapter, $state, TokenService) {
+  
   this.selected = Chapter.get($state.params);
 
   // this.pageClass = 'chapter-show-page'
@@ -18,6 +19,8 @@ function ChaptersShowController(Chapter, $state, TokenService) {
   this.currentUser = TokenService.decodeToken();
 
   this.whoOwns = function whoOwns() {
+    // console.log(this.currentUser._id + "current user id");
+    // console.log(this.selected.owner._id + "owner id");
     if(this.currentUser === null){
       return false;
     } else if(this.currentUser.username === "Slowly Smiles") {

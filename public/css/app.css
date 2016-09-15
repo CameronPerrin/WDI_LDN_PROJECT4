@@ -393,6 +393,11 @@ body {
     text-align: left;
     font-size: 18px;
     margin: 0 35px 15px 35px; }
+  .about-page ol {
+    text-align: left;
+    font-size: 17px;
+    margin: 0 35px 15px 65px;
+    list-style-type: upper-roman; }
 
 .reminder {
   position: absolute;
