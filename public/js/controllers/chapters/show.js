@@ -19,13 +19,11 @@ function ChaptersShowController(Chapter, $state, TokenService) {
   this.currentUser = TokenService.decodeToken();
 
   this.whoOwns = function whoOwns() {
-    // console.log(this.currentUser._id + "current user id");
-    // console.log(this.selected.owner._id + "owner id");
-    if(this.currentUser === null){
+    if(!this.currentUser){
       return false;
     } else if(this.currentUser.username === "Slowly Smiles") {
       return true;
-    } else if(this.currentUser._id === this.selected.owner._id) {
+    } else if(!this.selected.owner || this.currentUser._id === this.selected.owner._id) {
       return true;
     } else {
       return false;

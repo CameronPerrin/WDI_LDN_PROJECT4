@@ -8,7 +8,7 @@ angular
       transform: function(data) {
         var formData = new FormData();
         angular.forEach(data, function(value, key) {
-          if(value._id) value = value._id;
+          if(value && value._id) value = value._id;
           if(!key.match(/^\$/)) formData.append(key, value);
         });
 

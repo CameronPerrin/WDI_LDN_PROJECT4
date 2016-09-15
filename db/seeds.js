@@ -75,6 +75,7 @@ var chapter1_1_2_2 = new Chapter({
   buttonText: "go peacefully",
   content: "They grab you by your arms and you willingly walk with them. They bring to a large palace made of what looks like sandstone. The entrance room is alrge and filled with many doors. The guards take you through on of these dooors. There is a man waiting on the other side sitting in a highchair behind a  booth. He has on a uniform that makes him look like he is in a marching band. One of the guards says, 'This man was caught making a scene.' The other guard explains, 'He was yelling and shouting at citizens.' The figure behind the booth asks, 'is he wounded?' You look down to see a large blood stain on your torso. 'No', the guard explains. the figure gestures for them to move you away and says, 'give him 4 days in jail, if he has friends they will come get him.' Before you can respond the guards move out the door and into another. This room is a long hallway with cells on either side as far as the eye can see. you hear distant screams.",
   topLevel: false,
+  image: ""
   optionOneText: "Fight their attempt to jail you",
   optionTwoText: "Accept your fate and let them take you to your cell",
   owner: cameron
@@ -87,10 +88,11 @@ chapter1_1_2_2.save(function(err, chapter) {
 
 var chapter1_1_2_1 = new Chapter({
   buttonText: "resist their attempt to grab you",
-  content: "You put up your fists but they hit you before you can throw your first punch. Everything goes black. You wake up in a jail cell. You notice your shirt is stained with blood.",
+  content: "You put up your fists but they hit you before you can throw your first punch. Everything goes black because of a swift hit to the back of your head. You wake up in a jail cell. You notice your shirt is stained with blood.",
   topLevel: false,
   optionOneText: "Search for  something usefull",
   optionTwoText: "Try and talk to one of the neighboring cells",
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/5e29e570-7b46-11e6-b970-c5a191f5564e.jpg",
   owner: cameron
 })
 chapter1_1_2_1.save(function(err, chapter) {
@@ -105,6 +107,7 @@ var chapter1_1_2 = new Chapter({
   seeding: true,
   optionOneText: chapter1_1_2_1.buttonText,
   optionTwoText: chapter1_1_2_2.buttonText,
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/e7a48ea0-7b45-11e6-b970-c5a191f5564e.jpg",
   options: [
     chapter1_1_2_1,
     chapter1_1_2_2
@@ -123,6 +126,7 @@ var chapter1_1 = new Chapter({
   topLevel: false,
   optionOneText: chapter1_1_1.buttonText,
   optionTwoText: chapter1_1_2.buttonText,
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/65026d00-7b40-11e6-821d-ad1bab5a4f1d.jpg",
   seeding: true,
   options: [
     chapter1_1_1,
@@ -141,6 +145,7 @@ var chapter1_2_1_2 = new Chapter({
   topLevel: false,
   optionOneText: "Give him your name",
   optionTwoText: "Run",
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/126119b0-7b37-11e6-8f15-dbd7534f7813.jpg",
   owner: cameron
 })
 chapter1_2_1_2.save(function(err, chapter) {
@@ -154,6 +159,7 @@ var chapter1_2_1_1 = new Chapter({
   topLevel: false,
   optionOneText: "Shoot him!",
   optionTwoText: "See what he has to say",
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/9b3be0c0-7b33-11e6-9aab-8d590e2bd81c.JPG",
   owner: cameron
 })
 chapter1_2_1_1.save(function(err, chapter) {
@@ -163,10 +169,11 @@ chapter1_2_1_1.save(function(err, chapter) {
 
 var chapter1_2_1 = new Chapter({
   buttonText: "Follow the trail",
-  content: "The trail goes on for miles. It gets smaller and smaller the farther you go. You follow it until through the night and reach a small abonded cottage.",
+  content: "The trail goes on for miles. It gets smaller and smaller the farther you go. You follow it through the night until you reach a small abonded cottage.",
   topLevel: false,
   optionOneText: chapter1_2_1_1.buttonText,
   optionTwoText: chapter1_2_1_2.buttonText,
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/ddccb320-7b32-11e6-927f-a758f7708397.jpg",
   seeding: true,
   options: [
     chapter1_2_1_1,
@@ -182,6 +189,7 @@ chapter1_2_1.save(function(err, chapter) {
 var chapter1_2_2_2 = new Chapter({
   buttonText: "Grab a sword",
   content: "You grab a sword and attack the four men head on. They are experienced at fighting and swiftly cut you down. You are dead.",
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/3788eb00-7b32-11e6-8e2f-81aec5def2f4.png",
   topLevel: false,
   endGame: true,
   owner: cameron
@@ -193,10 +201,11 @@ chapter1_2_2_2.save(function(err, chapter) {
 
 var chapter1_2_2_1 = new Chapter({
   buttonText: "Hide behind the trees",
-  content: "Four fully armored men stroll by. They are all fully armored, but the armor they wear is nothing like that of the corpses. The armor they wear is very thick and heavy. It is mostly made of leather but has bits and pieces of scrap metal on it. The men patrolling the area pass you and you are unnoticed.",
+  content: "Four fully armored men stroll by. The armor they wear is nothing like that of the corpses. The armor they wear is very thick and heavy. It is mostly made of leather but has bits and pieces of scrap metal on it. The men patrolling the area pass you and you are unnoticed.",
   topLevel: false,
   optionOneText: "Pick up a sword and attack them by suprise",
   optionTwoText: "Follow them",
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/47cba080-7b31-11e6-b896-6d19afc0afd8.jpg",
   owner: cameron
 })
 chapter1_2_2_1.save(function(err, chapter) {
@@ -210,6 +219,7 @@ var chapter1_2_2 = new Chapter({
   topLevel: false,
   optionOneText: chapter1_2_2_1.buttonText,
   optionTwoText: chapter1_2_2_2.buttonText,
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/e7af6610-7b2f-11e6-aceb-21fb36f42691.jpg",
   seeding: true,
   options: [
     chapter1_2_2_1,
@@ -228,11 +238,13 @@ var chapter1_2 = new Chapter({
   topLevel: false,
   optionOneText: chapter1_2_1.buttonText,
   optionTwoText: chapter1_2_2.buttonText,
+  image: "https://s3-eu-west-1.amazonaws.com/arkea/978aee10-7b30-11e6-9a99-cff6c1749359.jpg",
   seeding: true,
   options: [
     chapter1_2_1,
     chapter1_2_2
   ],
+
   owner: cameron
 })
 chapter1_2.save(function(err, chapter) {

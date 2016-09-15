@@ -14,7 +14,8 @@ var chapterSchema = new mongoose.Schema({
 
 chapterSchema.path('image')
   .get(function(image) {
-    return s3.endpoint.href + process.env.AWS_BUCKET_NAME + "/" + image;
+    if(image) return s3.endpoint.href + process.env.AWS_BUCKET_NAME + "/" + image;
+    return null;
   })
   .set(function(image) {
     return image.split('/').splice(-1)[0];
@@ -34,6 +35,8 @@ chapterSchema.pre('save', function(next) {
   if(this.seeding) return next();
 
   var doc = this;
+
+  if(this.options.length > 0) return next();
 
   if(!this.content && !this.owner){
     this.topLevel = false;
