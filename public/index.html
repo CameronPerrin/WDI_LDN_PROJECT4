@@ -40,7 +40,7 @@
       <div ng-if="!main.currentUser" ui-sref="register" ng-click="main.hamburgerOpen()">
         register
       </div>
-      <div href="#" ng-if="main.currentUser" ui-sref="register" ng-click="main.logout(); main.hamburgerOpen()">
+      <div href="#" ng-if="main.currentUser" ui-sref="login" ng-click="main.logout(); main.hamburgerOpen()">
         logout
       </div>
       <div ui-sref="home" ng-click="main.hamburgerOpen()">
